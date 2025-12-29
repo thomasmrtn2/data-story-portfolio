@@ -15,23 +15,24 @@ const projectsData: Record<string, {
   imageUrl?: string;
 }> = {
   "1": {
-    title: "NLP Sentiment Analyzer",
-    oneLiner: "Real-time sentiment analysis for social media monitoring",
-    stack: ["Python", "PyTorch", "Transformers", "FastAPI", "Docker"],
-    context: "Les entreprises ont besoin de comprendre en temps réel ce que leurs clients disent sur les réseaux sociaux. Ce projet propose une solution scalable de monitoring de sentiment utilisant des modèles de langage state-of-the-art.",
+    title: "AI News Automation",
+    oneLiner: "Automated AI research pipeline: collects, filters and delivers the most relevant ArXiv articles daily",
+    stack: ["n8n", "LLM (Gemini)", "ArXiv RSS", "Gmail", "Google Sheets"],
+    context: "Staying up-to-date with AI/ML research is time-consuming. This workflow automates my daily research monitoring by fetching, scoring, and filtering ArXiv publications, then delivering a curated summary straight to my inbox.",
     features: [
-      "Analyse multi-langue avec support de 12 langues",
-      "API REST haute performance avec latence < 100ms",
-      "Dashboard temps réel avec visualisations interactives",
-      "Fine-tuning automatique sur données client"
+      "Automated article retrieval via ArXiv RSS feed",
+      "Category-based scoring + LLM filtering to select the most relevant papers",
+      "Daily email digest with selected article summaries",
+      "Success logging to Google Sheets for tracking",
+      "Separate Error Workflow for robust error handling"
     ],
     results: [
-      { label: "Accuracy", value: "94.2%" },
-      { label: "Latence", value: "< 50ms" },
-      { label: "Throughput", value: "10K req/s" }
+      { label: "Time Saved", value: "~1h/day" },
+      { label: "Accuracy", value: "90%+" },
+      { label: "Uptime", value: "99%" }
     ],
-    githubUrl: "https://github.com/thomasmartin",
-    imageUrl: "/placeholder.svg"
+    githubUrl: "https://github.com/thomasmrtn2",
+    imageUrl: "/images/ai-news-workflow.png"
   },
   "2": {
     title: "Computer Vision Pipeline",
