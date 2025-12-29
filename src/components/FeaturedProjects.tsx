@@ -2,27 +2,31 @@ import ProjectCard from "./ProjectCard";
 
 const projects = [
   {
-    title: "Neural Network Classifier",
-    description: "Deep learning model for image classification achieving 98% accuracy on custom dataset using PyTorch and transfer learning.",
-    tags: ["PyTorch", "CNN", "Computer Vision"],
+    id: "1",
+    title: "NLP Sentiment Analyzer",
+    description: "Real-time sentiment analysis for social media monitoring using transformer models and FastAPI.",
+    tags: ["PyTorch", "Transformers", "FastAPI"],
     icon: "brain" as const,
   },
   {
-    title: "Real-time Analytics Pipeline",
-    description: "Scalable data pipeline processing 1M+ events/day with Apache Kafka and Spark for real-time ML predictions.",
-    tags: ["Spark", "Kafka", "MLOps"],
+    id: "2",
+    title: "Computer Vision Pipeline",
+    description: "Automated defect detection for manufacturing quality control with 99% recall rate.",
+    tags: ["TensorFlow", "OpenCV", "MLflow"],
     icon: "database" as const,
   },
   {
+    id: "3",
     title: "Time Series Forecasting",
-    description: "LSTM-based forecasting system for financial markets with custom attention mechanisms and uncertainty quantification.",
-    tags: ["TensorFlow", "LSTM", "Finance"],
+    description: "ML-powered demand forecasting for supply chain optimization reducing stock-outs by 45%.",
+    tags: ["Prophet", "XGBoost", "Airflow"],
     icon: "chart" as const,
   },
   {
-    title: "Conversational AI Agent",
-    description: "RAG-powered chatbot using LangChain and vector databases for intelligent document Q&A with 95% relevance score.",
-    tags: ["LangChain", "RAG", "LLMs"],
+    id: "4",
+    title: "Recommendation Engine",
+    description: "Personalized content recommendations using hybrid deep learning approach with +35% CTR.",
+    tags: ["PyTorch", "Redis", "AWS"],
     icon: "bot" as const,
   },
 ];
@@ -48,7 +52,8 @@ const FeaturedProjects = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {projects.map((project, index) => (
             <ProjectCard
-              key={project.title}
+              key={project.id}
+              id={project.id}
               title={project.title}
               description={project.description}
               tags={project.tags}
